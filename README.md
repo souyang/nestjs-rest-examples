@@ -1,9 +1,9 @@
 # NestJS Sample
 
-![Compile and build](https://github.com/souyang/nestjs-rest-sample/actions/workflows/build.yml/badge.svg)
-![Build Docker Image](https://github.com/souyang/nestjs-rest-sample/workflows/Dockerize/badge.svg)
-![Run e2e testing](https://github.com/souyang/nestjs-rest-sample/workflows/e2e/badge.svg)
-[![codecov](https://codecov.io/gh/souyang/nestjs-rest-sample/branch/master/graph/badge.svg?token=MBLWAJPG13)](https://codecov.io/gh/souyang/nestjs-rest-sample)
+![Compile and build](https://github.com/souyang/nestjs-rest-examples/actions/workflows/build.yml/badge.svg)
+![Build Docker Image](https://github.com/souyang/nestjs-rest-examples/workflows/Dockerize/badge.svg)
+![Run e2e testing](https://github.com/souyang/nestjs-rest-examples/workflows/e2e/badge.svg)
+[![codecov](https://codecov.io/gh/souyang/nestjs-rest-examples/branch/master/graph/badge.svg?token=MBLWAJPG13)](https://codecov.io/gh/souyang/nestjs-rest-examples)
 
 A NestJS RESTful APIs sample project, including:
 

@@ -62,7 +62,7 @@ describe('preSaveHook', () => {
     const contextMock = {
       isModified: jest.fn(),
       set: jest.fn(),
-      password: '123456',
+      password: 'password',
     };
     contextMock.isModified.mockReturnValueOnce(true);
     await preSaveHook.call(contextMock, nextMock);

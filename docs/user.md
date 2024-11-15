@@ -241,7 +241,7 @@ describe('Register Controller', () => {
 
 In the above testing codes, we go through all conditions and make sure all code blocks in the `RegisterController` are hit.
 
-Correspondingly add tests for the newly added methods in `UserService` .  Here I skip the testing codes here, please check the [source code](https://github.com/souyang/nestjs-rest-sample/tree/feat/user) yourself.
+Correspondingly add tests for the newly added methods in `UserService` .  Here I skip the testing codes here, please check the [source code](https://github.com/souyang/nestjs-rest-examples/tree/feat/user) yourself.
 
 ## Hashing password 
 
@@ -304,7 +304,6 @@ flatMap((user) => {
 It is a little difficult to test the hooks of  the `User` model, to simplify the testing work,  here I  extract the  hooks to standalone functions, and mock the calling context in the tests.
 
 ```typescript
-// see: https://stackoverflow.com/questions/58701700/how-do-i-test-if-statement-inside-my-mongoose-pre-save-hook
 describe('preSaveHook', () => {
     test('should execute next middleware when password is not modified', async () => {
         const nextMock = jest.fn();
@@ -322,7 +321,7 @@ describe('preSaveHook', () => {
         const contextMock = {
             isModified: jest.fn(),
             set: jest.fn(),
-            password: '123456'
+            password: 'password'
         };
         contextMock.isModified.mockReturnValueOnce(true);
         await preSaveHook.call(contextMock, nextMock);
@@ -333,7 +332,7 @@ describe('preSaveHook', () => {
 });
 ```
 
-Explore other tests for `comparePasswordMethod` etc in the [user.mdoel.sepc.ts](https://github.com/souyang/nestjs-rest-sample/blob/master/src/database/user.mdoel.spec.ts).
+Explore other tests for `comparePasswordMethod` etc in the [user.model.sepc.ts](https://github.com/souyang/nestjs-rest-examples/blob/master/src/database/user.mdoel.spec.ts).
 
 Now run the application, have a look at the log in the console about the user initialization, as you see the password stored in the MongoDB is hashed.
 
@@ -471,5 +470,5 @@ Ideally, a user registration progress should be split into two steps.
 * Validate the user input data from the registration form, and persist it into the MongoDB, then send a verification number to verify the registered phone number, email, etc.  In this stage, the user account will be suspended to verify.
 * The registered user receive the verification number or links in emails, provide it in the verification page or click the link in the email directly, and get verified. In this stage, the user account will be activated.
 
-Grab [the source codes from my github](https://github.com/souyang/nestjs-rest-sample), switch to branch [feat/user](https://github.com/souyang/nestjs-rest-sample/blob/feat/user).
+Grab [the source codes from my github](https://github.com/souyang/nestjs-rest-examples), switch to branch [feat/user](https://github.com/souyang/nestjs-rest-examples/blob/feat/user).
 
