@@ -48,5 +48,3 @@ $ npm run test:cov
 ## Reference
 - [The official Nestjs documentation](https://docs.nestjs.com)
 - [Wagago IO Courses](https://wanago.io)
-
-  *

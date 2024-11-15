@@ -35,13 +35,13 @@ describe('UserController', () => {
           username: 'souyang',
           password: 'mysecret',
           email: 'souyang@example.com',
-          firstName: 'souyang',
-          lastName: 'bai',
+          firstName: 'Simon',
+          lastName: 'Ouyang',
         } as any),
       );
     const user = await lastValueFrom(controller.getUser('id', false));
-    expect(user.firstName).toBe('souyang');
-    expect(user.lastName).toBe('bai');
+    expect(user.firstName).toBe('Simon');
+    expect(user.lastName).toBe('Ouyang');
     expect(service.findById).toBeCalledWith('id', false);
   });
 });

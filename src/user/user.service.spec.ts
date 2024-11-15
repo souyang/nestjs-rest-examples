@@ -47,8 +47,8 @@ describe('UserService', () => {
     const sampleData = {
       username: 'souyang',
       email: 'souyang@example.com',
-      firstName: 'souyang',
-      lastName: 'bai',
+      firstName: 'Simon',
+      lastName: 'Ouyang',
       password: 'mysecret',
     };
 

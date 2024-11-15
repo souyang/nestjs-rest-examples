@@ -10,8 +10,8 @@ describe('RegisterDto', () => {
     const dto: RegisterDto = {
       username: 'souyang',
       password: 'password',
-      firstName: 'souyang',
-      lastName: 'Bai',
+      firstName: 'Simon',
+      lastName: 'Ouyang',
       email: 'souyang@gmail.com'
     };
 
@@ -19,8 +19,8 @@ describe('RegisterDto', () => {
       {
         username: 'souyang',
         password: 'password',
-        firstName: 'souyang',
-        lastName: 'Bai',
+        firstName: 'Simon',
+        lastName: 'Ouyang',
         email: 'souyang@gmail.com'
       }
     );

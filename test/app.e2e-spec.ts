@@ -30,8 +30,8 @@ describe('API endpoints testing (e2e)', () => {
           username: 'souyang',
           password: 'password',
           email: 'souyang@test.com',
-          firstName: 'souyang',
-          lastName: 'Bai'
+          firstName: 'Simon',
+          lastName: 'Ouyang'
         });
       expect(res.status).toBe(409);
     });
@@ -43,8 +43,8 @@ describe('API endpoints testing (e2e)', () => {
           username: 'souyang1',
           password: 'password',
           email: 'souyang@example.com',
-          firstName: 'souyang',
-          lastName: 'Bai'
+          firstName: 'Simon',
+          lastName: 'Ouyang'
         });
       expect(res.status).toBe(409);
     });
@@ -56,8 +56,8 @@ describe('API endpoints testing (e2e)', () => {
           username: 'souyang1',
           password: 'password',
           email: 'souyang@gmail.com',
-          firstName: 'souyang',
-          lastName: 'Bai'
+          firstName: 'Simon',
+          lastName: 'Ouyang'
         });
       expect(res.status).toBe(201);
     });

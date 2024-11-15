@@ -36,7 +36,7 @@ export class PostService {
   findById(id: string): Observable<Post> {
     return from(this.postModel.findOne({ _id: id }).exec()).pipe(
       mergeMap((p) => (p ? of(p) : EMPTY)),
-      throwIfEmpty(() => new NotFoundException(`post:$id was not found`)),
+      throwIfEmpty(() => new NotFoundException(`Post with ID ${id} was not found`)),
     );
   }
 
@@ -76,7 +76,7 @@ export class PostService {
 
   deleteById(id: string): Observable<Post> {
     return from(this.postModel.findOneAndDelete({ _id: id }).exec()).pipe(
-      mergeMap((p) => (p ? of(p.value) : EMPTY)),
+      mergeMap((p) => (p ? of(p) : EMPTY)),
       throwIfEmpty(() => new NotFoundException(`post:$id was not found`)),
     );
     // const filter = { _id: id };
