@@ -40,4 +40,4 @@ jobs:
       - name: Login to DockerHub Registry
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Push Docker Image
-        run: docker push souyang/nestjs-rest-examples
+        run: docker push bcgdvsimon/nestjs-rest-examples
