@@ -38,6 +38,6 @@ jobs:
       - run: npm install --registry=https://registry.npmjs.org
       - run: npm run test:cov
       - name: Upload testing reports
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
