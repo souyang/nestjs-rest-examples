@@ -9,7 +9,7 @@ A NestJS RESTful APIs sample project, including:
 - [x] Github actions workflow for continuous testing, code coverage report, docker image building
 
 ## Docs
-- [Documentation](./docs/index.md)
+- [Documentation](https://souyang.github.io/)
 
 ## Build
 
